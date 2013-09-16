@@ -7,7 +7,6 @@ describe('myStore layout', function() {
         expect(browser().window().hash()).toBe('/entity/ms.navigation');
 //      pause();
     });
-
     //add new navigation
 it('should add new navigation', function() {
 //        expect(repeater('#myTable tbody tr').count()).toBe(2);
@@ -43,7 +42,7 @@ it('should add new navigation', function() {
         it('should search in navigation', function() {
             expect(browser().window().hash()).toBe('/entity/ms.navigation');
             input('searchTxt').enter('headername');
-            expect(element('#myTable tbody tr').html()).toContain('headername');
+//            expect(element('#myTable tbody tr').html()).toContain('headername');
 //            pause();
 
         }) ;
