@@ -5,16 +5,20 @@ basePath = '';
 
 // list of files / patterns to load in the browser
 files = [
- 'angular-scenario.js',
-  ANGULAR_SCENARIO_ADAPTER,
-    'app/test/e2e/admin/window-dialog-command.js',
-    'app/test/e2e/admin/Navigationsscenario.js',
-////    'app/test/e2e/admin/entity_test.js',
-//    'app/test/e2e/admin/category_test.js',
-////    'app/test/e2e/admin/product_test.js',
-        'test/scenario.js',
+    'app/frontend/js/angular-scenario.js',
+    ANGULAR_SCENARIO_ADAPTER,
+//    'app/test/e2e/admin/func.js',
+    'app/test/e2e/admin/login_test.js',
+//'app/test/e2e/admin/productscenario.js',
+//'app/test/e2e/admin/layout.js',
+    'app/test/e2e/admin/navigation.js',
+//'app/test/e2e/tagtest.js',
+// 'app/test/e2e/admin/pages.js',
+
 //    'app/test/e2e/**/*.js',
-   'jquery-1.9.1.js'
+//    'app/test/e2e/entity.js',
+    'app/test/e2e/window-dialog-command.js',
+    'app/frontend/js/jquery-1.9.1.js'
 ];
 
 // list of files to exclude
@@ -24,6 +28,14 @@ exclude = [];
 // possible values: dots || progress || growl
 reporters = ['progress'];
 
+preprocessors = {
+    'app/test/e2e/admin/**.js': 'coverage'
+};
+reporters = ['coverage'];
+coverageReporter = {
+    type : 'html',
+    dir : 'coverage/'
+}
 // web server port
 port = 3000;
 
@@ -48,7 +60,7 @@ autoWatch = false;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['mozila'];
+browsers = ['Chrome'];
 
 // If browser does not capture in given timeout [ms], kill it
 captureTimeout = 35000;
@@ -59,6 +71,6 @@ singleRun = false;
 
 proxies =  {
     //  '/': 'http://localhost:9000/angular-phonecat/' // Keep this in sync with localhost port in Gruntfile.
-    '/': 'http://testcases.mystore.manu:3000/'
+    '/': 'http://testcases.mystore.in'
 };
 urlRoot = '/__e2e/';
