@@ -14,7 +14,7 @@ describe('login check', function() {
             expect(using('.main-content').input('user.password').val()).toBe('manusis');
             element('.inline').click();                       //check remember me
             element('.clearfix > button').click();            //click on login button
-//            expect(browser().window().hash()).toBe('/');
+            expect(browser().window().hash()).toBe('/');
            /* element('.light-blue > a').click();
             element('.light-blue ul li:nth-child(3) a').click();
             expect(browser().window().hash()).toBe('/');

@@ -43,7 +43,7 @@ it('should add new navigation', function() {
             expect(browser().window().hash()).toBe('/entity/ms.navigation');
             input('searchTxt').enter('headername');
 //            expect(element('#myTable tbody tr').html()).toContain('headername');
-//            pause();
+            pause();
 
         }) ;
 
