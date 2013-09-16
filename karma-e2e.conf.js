@@ -7,8 +7,8 @@ basePath = '';
 files = [
  'angular-scenario.js',
   ANGULAR_SCENARIO_ADAPTER,
-//    'app/test/e2e/admin/window-dialog-command.js',
-//    'app/test/e2e/admin/entity_func.js',
+    'app/test/e2e/admin/window-dialog-command.js',
+    'app/test/e2e/admin/Navigationsscenario.js',
 ////    'app/test/e2e/admin/entity_test.js',
 //    'app/test/e2e/admin/category_test.js',
 ////    'app/test/e2e/admin/product_test.js',
@@ -48,7 +48,7 @@ autoWatch = false;
 // - Safari (only Mac)
 // - PhantomJS
 // - IE (only Windows)
-browsers = ['Chrome'];
+browsers = ['mozila'];
 
 // If browser does not capture in given timeout [ms], kill it
 captureTimeout = 35000;
