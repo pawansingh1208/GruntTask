@@ -1,0 +1,22 @@
+{
+    "name": "test",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node app"
+    },
+    "dependencies": {
+        "grunt-karma": "~0.4.5",
+        "karma": "~0.10"
+    },
+    "scripts": {
+        "test": "grunt karma"
+    },
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-karma": "~0.4.3"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    }
+}
