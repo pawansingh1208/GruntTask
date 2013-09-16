@@ -16,5 +16,6 @@ module.exports = function (grunt) {
 
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-karma:e2e');
+    grunt.loadNpmTasks('grunt-karmavvvvv');
 
 };
