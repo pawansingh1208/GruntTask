@@ -9,7 +9,7 @@ files = [
     ANGULAR_SCENARIO_ADAPTER,
 //    'app/test/e2e/admin/func.js',
     'app/test/e2e/admin/login_test.js',
-//'app/test/e2e/admin/productscenario.js',
+'app/test/e2e/admin/productscenario.js',
 //'app/test/e2e/admin/layout.js',
     'app/test/e2e/admin/navigation.js',
 //'app/test/e2e/tagtest.js',
@@ -23,7 +23,8 @@ files = [
 // list of files to exclude
 exclude = [];
 
-
+// test results reporter to use
+// possible values: dots || progress || growl
 reporters = ['progress'];
 
 preprocessors = {
