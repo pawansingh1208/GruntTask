@@ -26,15 +26,17 @@ exclude = [];
 // test results reporter to use
 // possible values: dots || progress || growl
 reporters = ['progress'];
+reporters = ['junit'];
 
 preprocessors = {
-    'app/test/e2e/admin/**.js': 'coverage'
+    '**/*.js': 'coverage'
 };
-reporters = ['coverage'];
-coverageReporter = {
-    type : 'html',
-    dir : 'coverage/'
-}
+
+junitReporter = {
+    outputFile : 'results.xml',
+    suite : 'e2e'
+};
+
 // web server port
 port = 3000;
 
