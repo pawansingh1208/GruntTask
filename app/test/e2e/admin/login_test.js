@@ -8,10 +8,10 @@ describe('login check', function() {
         sleep(2) ;
     });
     it('should click on login button with valid credentials then logout', function() {
-            using('.main-content').input('user.email').enter('kumar@manusis.com');
-            expect(using('.main-content').input('user.email').val()).toBe('kumar@manusis.com');
-            using('.main-content').input('user.password').enter('manusis');
-            expect(using('.main-content').input('user.password').val()).toBe('manusis');
+            using('.main-content').input('user.email').enter('rajiv@manusis.com');
+            expect(using('.main-content').input('user.email').val()).toBe('rajiv@manusis.com');
+            using('.main-content').input('user.password').enter('barton$123');
+            expect(using('.main-content').input('user.password').val()).toBe('barton$123');
             element('.inline').click();                       //check remember me
             element('.clearfix > button').click();            //click on login button
             expect(browser().window().hash()).toBe('/');
