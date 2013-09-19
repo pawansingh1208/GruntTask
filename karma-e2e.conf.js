@@ -4,9 +4,11 @@
 basePath = '';
 
 // list of files / patterns to load in the browser
-files = [
+files = [     ANGULAR_SCENARIO_ADAPTER,
+    JASMINE,
+    JASMINE_ADAPTER,
     'app/frontend/js/angular-scenario.js',
-    ANGULAR_SCENARIO_ADAPTER,
+
 //    'app/test/e2e/admin/func.js',
     'app/test/e2e/admin/login_test.js',
 //'app/test/e2e/admin/productscenario.js',
@@ -26,11 +28,11 @@ exclude = [];
 // test results reporter to use
 // possible values: dots || progress || growl
 reporters = ['progress'];
-reporters = ['junit'];
+reporters = ['dots','junit'];
 
-preprocessors = {
-    '**/*.js': 'coverage'
-};
+//preprocessors = {
+//    '**/*.js': 'coverage'
+//};
 junitReporter = {
     outputFile : 'results.xml',
     suite : 'e2e'
