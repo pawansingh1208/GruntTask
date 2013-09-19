@@ -5,8 +5,7 @@ basePath = '';
 
 // list of files / patterns to load in the browser
 files = [     ANGULAR_SCENARIO_ADAPTER,
-    JASMINE,
-    JASMINE_ADAPTER,
+
     'app/frontend/js/angular-scenario.js',
 
 //    'app/test/e2e/admin/func.js',
