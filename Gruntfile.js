@@ -489,7 +489,7 @@ module.exports = function (grunt) {
     grunt.registerMultiTask('dump', 'Dumps the entire database', function () {
         var exec = require('child_process').exec;
         var done = this.async();
-        var cmd ='mongodump --host mystore.in --username rohit --password manusis --out /home/pawan/dump/' + this.data;
+        var cmd ='mongodump --host mystore.in --username pawan --password manu321 --out /home/pawan/dump/' + this.data;
         console.log('cmd==', cmd);
         console.log('dump task is running');
         exec(cmd,function (error, stdout, stderr) {
