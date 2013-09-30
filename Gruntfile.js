@@ -486,7 +486,7 @@ module.exports = function (grunt) {
      });*/
 
 
-    grunt.registerMultiTask('dump', 'Dumps the entire database', function () {
+ /*   grunt.registerMultiTask('dump', 'Dumps the entire database', function () {
         var exec = require('child_process').exec;
         var done = this.async();
         var cmd ='mongodump --host mystore.in --username rohit --password manusis --out /home/pawan/dump/' + this.data;
@@ -502,6 +502,14 @@ module.exports = function (grunt) {
                 console.log(error);
 
             }
+        });
+    });*/
+
+    grunt.registerMultiTask('dump', 'Dumps the entire database', function () {
+        var myTerminal = require("child_process").exec,
+            commandToBeExecuted = 'mongodump --host mystore.in --username rohit --password manusis --out /home/rohit/Desktop/' + this.data;
+        myTerminal(commandToBeExecuted, function (error, stdout, stderr) {
+            if(error)throw error;
         });
     });
 
