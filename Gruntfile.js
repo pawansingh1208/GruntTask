@@ -520,17 +520,33 @@ module.exports = function (grunt) {
         });
     });
 
-    grunt.registerMultiTask('cdndump', 'Dumps the CDN', function () {
+    grunt.registerTask('cdn', 'Dumps the CDN', function () {
         var options = this.options({
             user: '<%=user%>',
             password: '<%=password%>'
         });
-        var myTerminal = require("child_process").exec,
-            commandToBeExecuted = 'sshpass -p ms23x78 rsync -chavzP --stats mscdn@mystore.in:/var/cdn /home/rohit';
-        console.log(commandToBeExecuted);
-        myTerminal(commandToBeExecuted, function (error, stdout, stderr) {
+        var exec = require('child_process').exec;
+        var done = this.async();
+//        var cmd ='sshpass -p ms23x78 rsync -chavzP --include '/' --include '*' --exclude '*' --stats mscdn@mystore.in:/var/cdn /home/pawan/';
+        var cmd ='sshpass -p ms23x78 rsync -chavzP --progress --stats mscdn@mystore.in:/var/cdn /home/pawan/';
+        console.log('Runnig Task==>', cmd);
+        console.log('cdndump task is running.................');
+        exec(cmd,'maxBuffer:500*1024',function (error, stdout, stderr) {
+            console.log('after exec') ;
+            if(!error){
+                console.log('in if');
+                console.log(stdout);
+                console.log(stderr);
+                done();
+            }
+            else {
+                console.log(error);
+            }
+            grunt.task.run('copytest','cdndump')
         });
     });
+
+
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-nodemon');
